@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Scents Plus Shop | Authentic Fragrances & Luxury Gifting</title>
+  <meta name="description" content="The Scents Plus Shop brings together carefully selected niche, designer and luxury fragrances with thoughtful gifting. Authentic fragrances. Thoughtful gifting.">
+  <meta name="theme-color" content="#111111">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #111111;
+      --charcoal: #2a2a2a;
+      --charcoal-mid: #3d3d3d;
+      --charcoal-muted: #6b6b6b;
+      --ivory: #f8f5f0;
+      --ivory-warm: #f3ede5;
+      --cream: #faf7f2;
+      --cream-deep: #f0ebe3;
+      --gold: #c4a97d;
+      --gold-dark: #a8906a;
+      --gold-light: #d4c4a0;
+      --white: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555555;
+      --text-muted: #999999;
+      --border-light: #e8e3dc;
+      --border-subtle: #f0ece6;
+      --whatsapp: #25D366;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-primary);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-center {
+        display: none;
+      }
+      .header-phone {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+      .header-inner {
+        padding: 0 20px;
+        height: 56px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+      .hero {
+        height: 88vh;
+        min-height: 520px;
+      }
+      .hero-content {
+        padding: 0 20px 56px;
+      }
+      .hero h1 {
+        font-size: 32px;
+        max-width: 100%;
+      }
+      .hero-desc {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 28px;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .trust-item {
+        padding: 0 12px;
+      }
+      .trust-item:not(:last-child)::after {
+        display: none;
+      }
+      .fragrances-section {
+        padding: 70px 0;
+      }
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .gifting-section {
+        padding: 70px 0;
+      }
+      .gifting-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .gifting-text {
+        order: -1;
+      }
+      .gifting-images {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .gifting-images .gift-img:first-child {
+        grid-row: auto;
+        aspect-ratio: 16/10;
+      }
+      .about-section {
+        padding: 70px 0;
+      }
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .about-images {
+        order: -1;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .about-images .about-img:first-child {
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .about-images .about-img:last-child {
+        margin-top: 0;
+        aspect-ratio: 3/4;
+      }
+      .gallery-grid {
+        columns: 2;
+        column-gap: 6px;
+      }
+      .gallery-item {
+        margin-bottom: 6px;
+      }
+      .gallery-section {
+        padding: 70px 0 60px;
+      }
+      .reviews-section {
+        padding: 70px 0;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 16px;
+      }
+      .review-card {
+        padding: 28px 24px;
+      }
+      .cta-section {
+        padding: 80px 0;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cta-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+      .footer {
+        padding: 56px 0 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+      }
+      .whatsapp-float .wa-tooltip {
+        display: none;
+      }
+      .scroll-top {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 16px;
+      }
+      .header-inner {
+        padding: 0 16px;
+        height: 52px;
+      }
+      .logo-img-circle {
+        width: 34px;
+        height: 34px;
+      }
+      .logo-text {
+        font-size: 11px;
+        letter-spacing: 1.2px;
+      }
+      .header-actions {
+        gap: 4px;
+      }
+      .header-actions button,
+      .header-actions a {
+        width: 30px;
+        height: 30px;
+      }
+      .header-actions svg {
+        width: 15px;
+        height: 15px;
+      }
+      .hero {
+        height: 85vh;
+        min-height: 480px;
+      }
+      .hero-content {
+        padding: 0 16px 48px;
+      }
+      .hero h1 {
+        font-size: 28px;
+        letter-spacing: -0.3px;
+      }
+      .hero-desc {
+        font-size: 13px;
+        margin-bottom: 24px;
+      }
+      .hero-tag {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 16px;
+      }
+      .btn {
+        padding: 11px 24px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+      .hero-buttons {
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      .trust-section {
+        padding: 40px 0;
+      }
+      .trust-item {
+        padding: 0 8px;
+      }
+      .trust-num {
+        font-size: 24px;
+      }
+      .section-header {
+        margin-bottom: 40px;
+      }
+      .section-header .overline {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+      }
+      .section-header h2 {
+        font-size: 26px;
+      }
+      .section-header p {
+        font-size: 13px;
+      }
+      .fragrances-section {
+        padding: 56px 0;
+      }
+      .products-grid {
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+      .product-image-wrap {
+        margin-bottom: 10px;
+      }
+      .product-info h3 {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      .product-brand {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+      }
+      .product-category {
+        font-size: 10.5px;
+        margin-bottom: 4px;
+      }
+      .product-price {
+        font-size: 11px;
+      }
+      .product-badge {
+        font-size: 7px;
+        padding: 3px 7px;
+        top: 8px;
+        left: 8px;
+      }
+      .product-quick-view {
+        display: none;
+      }
+      .gifting-section {
+        padding: 56px 0;
+      }
+      .gifting-layout {
+        gap: 32px;
+      }
+      .gifting-text .overline {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+      }
+      .gifting-text h2 {
+        font-size: 26px;
+        margin-bottom: 14px;
+      }
+      .gifting-text p {
+        font-size: 13px;
+        margin-bottom: 28px;
+      }
+      .gifting-buttons {
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .gifting-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      .about-section {
+        padding: 56px 0;
+      }
+      .about-layout {
+        gap: 32px;
+      }
+      .about-text .overline {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+      }
+      .about-text h2 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      .about-text p {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      .about-text .about-signature {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      .gallery-section {
+        padding: 56px 0 48px;
+      }
+      .gallery-grid {
+        column-gap: 4px;
+      }
+      .gallery-item {
+        margin-bottom: 4px;
+      }
+      .reviews-section {
+        padding: 56px 0;
+      }
+      .review-card {
+        padding: 24px 20px;
+      }
+      .review-card p {
+        font-size: 13px;
+      }
+      .cta-section {
+        padding: 64px 0;
+      }
+      .cta-section h2 {
+        font-size: 26px;
+      }
+      .cta-section > .container > .cta-content > p {
+        font-size: 13px;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      .footer {
+        padding: 48px 0 0;
+      }
+      .footer-grid {
+        gap: 28px;
+      }
+      .footer-col h4 {
+        font-size: 9px;
+        margin-bottom: 14px;
+      }
+      .footer-col ul {
+        gap: 8px;
+      }
+      .footer-col ul li a {
+        font-size: 13px;
+      }
+      .footer-contact-item {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .logo-img-circle {
+        width: 30px;
+        height: 30px;
+      }
+      .logo-text {
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+      .header-inner {
+        height: 48px;
+      }
+      .header-actions button,
+      .header-actions a {
+        width: 28px;
+        height: 28px;
+      }
+      .header-actions svg {
+        width: 15px;
+        height: 15px;
+      }
+      .cart-count::after {
+        width: 12px;
+        height: 12px;
+        font-size: 7px;
+      }
+      .hero h1 {
+        font-size: 26px;
+      }
+      .hero-content {
+        padding: 0 16px 40px;
+      }
+      .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 9px;
+      }
+      .mobile-nav {
+        padding: 80px 20px 32px;
+      }
+      .mobile-nav a {
+        font-size: 26px;
+        padding: 12px 0;
+      }
+    }
+
+    /* ============================================
+       ANNOUNCEMENT BAR
+    ============================================ */
+    .announcement-bar {
+      background-color: var(--black);
+      color: var(--gold-light);
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    /* ============================================
+       HEADER / NAVIGATION
+    ============================================ */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 1px 24px rgba(0,0,0,0.06);
+      border-bottom-color: transparent;
+    }
+
+    .header-top {
+      display: none;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--black);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .logo-img-circle {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: transparent;
+    }
+
+    .logo-text {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .logo .logo-accent {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-center a {
+      font-size: 11.5px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color 0.3s ease;
+      white-space: nowrap;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-center a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-center a:hover {
+      color: var(--black);
+    }
+
+    .nav-center a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-actions button,
+    .header-actions a:not(.header-phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      color: var(--charcoal);
+      transition: color 0.3s ease;
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    .header-actions .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: auto;
+      height: auto;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      color: var(--charcoal-muted);
+      white-space: nowrap;
+      padding-right: 0;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .header-actions button:hover,
+    .header-actions a:hover {
+      color: var(--black);
+    }
+
+    .header-actions svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 1.5;
+    }
+
+    .header-phone svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 1.5;
+      flex-shrink: 0;
+    }
+
+    .header-phone svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 1.5;
+      flex-shrink: 0;
+    }
+
+    .cart-count {
+      position: relative;
+    }
+
+    .cart-count::after {
+      content: '0';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 8px;
+      font-weight: 600;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 22px;
+      padding: 4px 0;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: var(--black);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: center;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(4.5px, 4.5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4.5px, -4.5px);
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      background: var(--white);
+      z-index: 999;
+      padding: 90px 32px 40px;
+      flex-direction: column;
+      gap: 0;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--black);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: var(--gold);
+      padding-left: 8px;
+    }
+
+    .mobile-nav-bottom {
+      margin-top: auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-nav-bottom p {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .mobile-nav-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--whatsapp);
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+      padding: 10px 20px;
+      border: 1px solid var(--whatsapp);
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .mobile-nav-wa:hover {
+      background: var(--whatsapp);
+      color: var(--white);
+    }
+
+    .mobile-nav-wa svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ============================================
+       HERO SECTION
+    ============================================ */
+    .hero {
+      position: relative;
+      height: 92vh;
+      min-height: 580px;
+      max-height: 880px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(17,17,17,0.88) 0%,
+        rgba(17,17,17,0.45) 40%,
+        rgba(17,17,17,0.08) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 40px 80px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+      font-weight: 400;
+      display: inline-block;
+      border-bottom: 1px solid rgba(196,169,125,0.3);
+      padding-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.5vw, 64px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      max-width: 560px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 36px;
+      max-width: 460px;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 32px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      transition: all 0.35s ease;
+      white-space: nowrap;
+      border: none;
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-dark);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--charcoal);
+    }
+
+    .btn-outline-dark {
+      border: 1px solid var(--black);
+      color: var(--black);
+      background: transparent;
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .btn-white:hover {
+      background: var(--ivory);
+    }
+
+    .btn-outline-gold {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+    }
+
+    .btn-outline-gold:hover {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1fb855;
+    }
+
+    /* ============================================
+       TRUST / VALUE SECTION
+    ============================================ */
+    .trust-section {
+      padding: 64px 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: 0 40px;
+      position: relative;
+    }
+
+    .trust-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 40px;
+      background: var(--border-light);
+    }
+
+    .trust-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .trust-item h3 {
+      font-size: 11px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .trust-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       SECTION HEADERS
+    ============================================ */
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header .overline {
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 500;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-size: clamp(30px, 3.8vw, 44px);
+      color: var(--text-primary);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .section-header p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 14px auto 0;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       FEATURED FRAGRANCES
+    ============================================ */
+    .fragrances-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .product-card {
+      position: relative;
+      background: var(--white);
+      cursor: pointer;
+      transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-image-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+      aspect-ratio: 3/4;
+      margin-bottom: 16px;
+    }
+
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      z-index: 2;
+    }
+
+    .product-quick-view {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      text-decoration: none;
+      background: rgba(17,17,17,0.88);
+      color: var(--white);
+      text-align: center;
+      padding: 12px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .product-card:hover .product-quick-view {
+      transform: translateY(0);
+    }
+
+    .product-info {
+      padding: 0 2px;
+    }
+
+    .product-brand {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .product-info h3 {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+
+    .product-category {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .product-price {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal);
+      letter-spacing: 0.3px;
+    }
+
+    .center-btn {
+      text-align: center;
+    }
+
+    /* ============================================
+       LUXURY GIFTING SECTION
+    ============================================ */
+    .gifting-section {
+      padding: 100px 0;
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .gifting-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .gifting-images {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+    }
+
+    .gifting-images .gift-img {
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .gifting-images .gift-img:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .gifting-images .gift-img:nth-child(2),
+    .gifting-images .gift-img:nth-child(3) {
+      aspect-ratio: 1/1;
+    }
+
+    .gifting-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .gifting-images .gift-img:hover img {
+      transform: scale(1.05);
+    }
+
+    .gifting-text .overline {
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .gifting-text h2 {
+      font-size: clamp(30px, 3.8vw, 44px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.12;
+    }
+
+    .gifting-text p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+
+    .gifting-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ============================================
+       ABOUT SECTION
+    ============================================ */
+    .about-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .about-images {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 12px;
+    }
+
+    .about-images .about-img:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .about-images .about-img:last-child {
+      aspect-ratio: 1/1;
+      margin-top: 36px;
+    }
+
+    .about-img {
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .about-img:hover img {
+      transform: scale(1.04);
+    }
+
+    .about-text .overline {
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .about-text h2 {
+      font-size: clamp(30px, 3.8vw, 42px);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 22px;
+      line-height: 1.12;
+    }
+
+    .about-text p {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      max-width: 460px;
+    }
+
+    .about-text .about-signature {
+      margin-top: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--charcoal);
+      font-weight: 400;
+    }
+
+    /* ============================================
+       INSTAGRAM GALLERY
+    ============================================ */
+    .gallery-section {
+      padding: 100px 0 80px;
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      columns: 4;
+      column-gap: 8px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      background: var(--ivory-warm);
+      position: relative;
+      cursor: pointer;
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-item .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17,17,17,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--white);
+      stroke-width: 1.5;
+    }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .gallery-cta a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gallery-cta a:hover {
+      color: var(--gold);
+    }
+
+    .gallery-cta a svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* ============================================
+       TRUST / CONFIDENCE
+    ============================================ */
+    .reviews-section {
+      padding: 100px 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .reviews-section h2 {
+      font-size: clamp(30px, 3.8vw, 42px);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .reviews-section > .container > p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 50px;
+      line-height: 1.7;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      padding: 36px 28px;
+      background: var(--cream);
+      border: 1px solid var(--border-subtle);
+      text-align: left;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 18px;
+    }
+
+    .review-stars svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--gold);
+    }
+
+    .review-card p {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .review-author {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--charcoal);
+      letter-spacing: 0.5px;
+      font-style: normal !important;
+    }
+
+    /* ============================================
+       FINAL CTA SECTION
+    ============================================ */
+    .cta-section {
+      position: relative;
+      padding: 110px 0;
+      background: var(--charcoal);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,169,125,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(30px, 4.5vw, 50px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 18px;
+      line-height: 1.12;
+    }
+
+    .cta-section > .container > .cta-content > p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+      max-width: 460px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.55);
+      padding: 72px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.3fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand .logo {
+      color: var(--white);
+      font-size: 18px;
+      margin-bottom: 16px;
+      display: inline-flex;
+    }
+
+    .footer-brand .logo .logo-accent {
+      color: var(--gold);
+    }
+
+    .footer-brand > p {
+      font-size: 13.5px;
+      line-height: 1.7;
+      max-width: 260px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 13.5px;
+    }
+
+    .footer-contact-item svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--gold);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .footer-contact-item a {
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--gold);
+      background: rgba(196,169,125,0.08);
+    }
+
+    .footer-social a svg {
+      width: 15px;
+      height: 15px;
+      stroke: rgba(255,255,255,0.5);
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.3px;
+    }
+
+    /* ============================================
+       FLOATING WHATSAPP BUTTON
+    ============================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 54px;
+      height: 54px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 900;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.4);
+    }
+
+    .whatsapp-float svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--white);
+    }
+
+    .whatsapp-float .wa-tooltip {
+      position: absolute;
+      right: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--white);
+      color: var(--charcoal);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 14px;
+      white-space: nowrap;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .whatsapp-float:hover .wa-tooltip {
+      opacity: 1;
+    }
+
+    /* ============================================
+       SCROLL TO TOP
+    ============================================ */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 90px;
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      color: var(--charcoal);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 899;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .scroll-top svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ============================================
+       ANIMATIONS
+    ============================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.2, 0, 0, 1), transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity 0.7s cubic-bezier(0.2, 0, 0, 1), transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity 0.7s cubic-bezier(0.2, 0, 0, 1), transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+
+    /* ============================================
+       SELECTION STYLES
+    ============================================ */
+    ::selection {
+      background: rgba(196,169,125,0.2);
+      color: var(--black);
+    }
+
+    /* ============================================
+       CUSTOM SCROLLBAR
+    ============================================ */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--charcoal-muted);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--charcoal);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    Authentic fragrances. Thoughtful gifting. Carefully curated.
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <img src="logo.svg" alt="The Scents Plus Shop" class="logo-img-circle">
+        <span class="logo-text">The Scents Plus <span class="logo-accent">Shop</span></span>
+      </a>
+
+      <nav class="nav-center">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#fragrances">Fragrances</a>
+        <a href="#gifts">Gift Packages</a>
+        <a href="#about">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+2348032179557" class="header-phone" aria-label="Call us">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0803 217 9557
+        </a>
+        <button aria-label="Search" id="searchBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="https://instagram.com/scents.plus" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="cart-count" aria-label="Shopping bag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#shop" class="mobile-nav-link">Shop</a>
+    <a href="#fragrances" class="mobile-nav-link">Fragrances</a>
+    <a href="#gifts" class="mobile-nav-link">Gift Packages</a>
+    <a href="#about" class="mobile-nav-link">About Us</a>
+    <div class="mobile-nav-bottom">
+      <p>@scents.plus &nbsp;&middot;&nbsp; scentsplus.com.ng</p>
+      <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20The%20Scents%20Plus%20Shop." class="mobile-nav-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <img class="hero-image" src="images/hero.jpg" alt="The Scents Plus Shop luxury fragrance collection" loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">The Scents Plus Shop</p>
+      <h1>Fragrance, curated beautifully.</h1>
+      <p class="hero-desc">Discover authentic niche, designer and luxury fragrances, alongside thoughtful gift packages created for special moments.</p>
+      <div class="hero-buttons">
+        <a href="#fragrances" class="btn btn-primary">Shop Fragrances</a>
+        <a href="#gifts" class="btn btn-outline">Explore Gift Packages</a>
+        <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20The%20Scents%20Plus%20Shop." class="btn btn-outline" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:14px;height:14px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / VALUE SECTION -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item fade-in stagger-1">
+          <p class="trust-num">100%</p>
+          <h3>Authentic</h3>
+          <p>Every fragrance is sourced from verified channels and guaranteed genuine.</p>
+        </div>
+        <div class="trust-item fade-in stagger-2">
+          <p class="trust-num">Curated</p>
+          <h3>Luxury Collection</h3>
+          <p>Handpicked niche, designer and luxury perfumes of exceptional quality.</p>
+        </div>
+        <div class="trust-item fade-in stagger-3">
+          <p class="trust-num">Thoughtful</p>
+          <h3>Gifting</h3>
+          <p>Bespoke gift packages designed with care and the person receiving them in mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED FRAGRANCES -->
+  <section class="fragrances-section" id="fragrances">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="overline">Our Collection</span>
+        <h2>Discover Your Next Signature Scent</h2>
+        <p>From rare niche creations to iconic designer classics, each fragrance is selected for its character and authenticity.</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card fade-in stagger-1">
+          <div class="product-image-wrap">
+            <span class="product-badge">Niche</span>
+            <img src="images/gallery/gallery-02.png" alt="Tom Ford Oud Wood" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Tom%20Ford%20Oud%20Wood.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Tom Ford</p>
+            <h3>Oud Wood</h3>
+            <p class="product-category">Unisex &middot; Woody Oriental</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+        <div class="product-card fade-in stagger-2">
+          <div class="product-image-wrap">
+            <img src="images/gallery/gallery-03.png" alt="Baccarat Rouge 540" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Baccarat%20Rouge%20540.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Maison Francis Kurkdjian</p>
+            <h3>Baccarat Rouge 540</h3>
+            <p class="product-category">Unisex &middot; Amber Floral</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+        <div class="product-card fade-in stagger-3">
+          <div class="product-image-wrap">
+            <span class="product-badge">Popular</span>
+            <img src="images/gallery/gallery-04.png" alt="Creed Aventus" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Creed%20Aventus.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Creed</p>
+            <h3>Aventus</h3>
+            <p class="product-category">Unisex &middot; Fruity Woody</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+        <div class="product-card fade-in stagger-1">
+          <div class="product-image-wrap">
+            <img src="images/gallery/gallery-05.png" alt="Dior Sauvage Elixir" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Dior%20Sauvage%20Elixir.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Dior</p>
+            <h3>Sauvage Elixir</h3>
+            <p class="product-category">Men &middot; Amber Fougere</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+        <div class="product-card fade-in stagger-2">
+          <div class="product-image-wrap">
+            <span class="product-badge">Exclusive</span>
+            <img src="images/gallery/gallery-06.png" alt="Parfums de Marly Delina La Rosee" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Parfums%20de%20Marly%20Delina%20La%20Rosee.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Parfums de Marly</p>
+            <h3>Delina La Rosee</h3>
+            <p class="product-category">Women &middot; Floral Fresh</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+        <div class="product-card fade-in stagger-3">
+          <div class="product-image-wrap">
+            <img src="images/gallery/gallery-07.png" alt="Dolce and Gabbana Light Blue" loading="lazy">
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20am%20interested%20in%20Dolce%20%26%20Gabbana%20Light%20Blue%20Eau%20Intense.%20Please%20can%20I%20get%20more%20information%3F" class="product-quick-view" target="_blank" rel="noopener">Contact to Order</a>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Dolce & Gabbana</p>
+            <h3>Light Blue Eau Intense</h3>
+            <p class="product-category">Unisex &middot; Citrus Aromatic</p>
+            <p class="product-price">Contact to Order</p>
+          </div>
+        </div>
+      </div>
+      <div class="center-btn fade-in">
+        <a href="#shop" class="btn btn-outline-dark">View All Fragrances</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUXURY GIFTING -->
+  <section class="gifting-section" id="gifts">
+    <div class="container">
+      <div class="gifting-layout">
+        <div class="gifting-images fade-in-left">
+          <div class="gift-img">
+            <img src="images/gallery/gallery-08.png" alt="Luxury gift package" loading="lazy">
+          </div>
+          <div class="gift-img">
+            <img src="images/gallery/gallery-09.png" alt="Premium gift box" loading="lazy">
+          </div>
+          <div class="gift-img">
+            <img src="images/gallery/gallery-10.png" alt="Curated gift set" loading="lazy">
+          </div>
+        </div>
+        <div class="gifting-text fade-in-right">
+          <p class="overline">Bespoke Gifting</p>
+          <h2>Made for Moments Worth Remembering</h2>
+          <p>From intimate celebrations to meaningful milestones, our bespoke gift packages are thoughtfully put together to make every gift feel personal.</p>
+          <div class="gifting-buttons">
+            <a href="#gifts" class="btn btn-primary">Explore Gift Packages</a>
+            <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20gift%20packages." class="btn btn-outline-gold" target="_blank" rel="noopener">Make an Enquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-images fade-in-left">
+          <div class="about-img">
+            <img src="images/gallery/gallery-11.png" alt="The Scents Plus Shop fragrance selection" loading="lazy">
+          </div>
+          <div class="about-img">
+            <img src="images/gallery/gallery-12.png" alt="The Scents Plus Shop luxury perfumes" loading="lazy">
+          </div>
+        </div>
+        <div class="about-text fade-in-right">
+          <p class="overline">Our Story</p>
+          <h2>More Than a Fragrance Shop</h2>
+          <p>The Scents Plus Shop brings together carefully selected niche, designer and luxury fragrances with thoughtful gifting. Every recommendation and gift package is approached with attention to detail, authenticity and the person receiving it.</p>
+          <p>We believe that the right fragrance is personal. It tells a story. And finding it should feel just as special as wearing it.</p>
+          <p class="about-signature">The Scents Plus Shop</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM GALLERY -->
+  <section class="gallery-section" id="shop">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="overline">Follow Along</span>
+        <h2>From Our Collection</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-13.png" alt="The Scents Plus Shop luxury perfume display" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-14.png" alt="The Scents Plus Shop fragrance collection" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-15.png" alt="Luxury perfume bottle" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-16.png" alt="Premium fragrance" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-17.png" alt="The Scents Plus Shop gift boxes" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-18.png" alt="Bespoke gift packaging" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-19.png" alt="Perfume collection" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-20.png" alt="Luxury fragrance bottles" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-21.png" alt="Niche fragrance" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-22.png" alt="The Scents Plus Shop curated gifts" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-23.png" alt="Designer perfume" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-24.png" alt="Exclusive fragrance" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/gallery/gallery-01.png" alt="The Scents Plus Shop featured collection" loading="lazy">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cta fade-in">
+        <a href="https://instagram.com/scents.plus" target="_blank" rel="noopener">
+          Follow @scents.plus
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / CONFIDENCE -->
+  <section class="reviews-section">
+    <div class="container">
+      <h2 class="fade-in">Chosen with Confidence</h2>
+      <p class="fade-in">We take pride in authentic products, careful curation and thoughtful service. Here is what our customers have to say.</p>
+      <div class="reviews-grid">
+        <div class="review-card fade-in stagger-1">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"Every fragrance I have ordered has been authentic and beautifully packaged. The attention to detail stands out every time."</p>
+           <p class="review-author">Chisom</p>
+        </div>
+        <div class="review-card fade-in stagger-2">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"I gifted a custom package to my sister and she absolutely loved it. The curation was spot on. Will definitely order again."</p>
+          <p class="review-author">Samuel</p>
+        </div>
+        <div class="review-card fade-in stagger-3">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p>"The consultation was incredibly helpful. I found my signature scent after months of searching. Professional and knowledgeable service."</p>
+          <p class="review-author">Emmanuel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Find a Fragrance They Will Remember</h2>
+        <p>Explore our fragrance collection or speak with us about creating the perfect gift.</p>
+        <div class="cta-buttons">
+          <a href="#fragrances" class="btn btn-white">Shop the Collection</a>
+          <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20The%20Scents%20Plus%20Shop." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:14px;height:14px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+<a href="#home" class="logo">
+          <img src="logo.svg" alt="The Scents Plus Shop" class="logo-img-circle">
+          <span class="logo-text">The Scents Plus <span class="logo-accent">Shop</span></span>
+        </a>
+          <p>Authentic fragrances and thoughtfully curated gifts. Niche, designer and luxury perfumes for every occasion.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/scents.plus" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://wa.me/2348032179557" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+2348032179557" aria-label="Call us">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#fragrances">Fragrances</a></li>
+            <li><a href="#gifts">Gift Packages</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#fragrances">Niche Perfumes</a></li>
+            <li><a href="#fragrances">Designer Perfumes</a></li>
+            <li><a href="#fragrances">Luxury Fragrances</a></li>
+            <li><a href="#gifts">Bespoke Gifts</a></li>
+            <li><a href="#gifts">Gift Consultations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+2348032179557">0803 217 9557</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:15px;height:15px;stroke:var(--gold);fill:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <a href="https://wa.me/2348032179557" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://instagram.com/scents.plus" target="_blank" rel="noopener">@scents.plus</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://scentsplus.com.ng" target="_blank" rel="noopener">scentsplus.com.ng</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Scents Plus Shop. All rights reserved.</p>
+        <p>Authentic fragrances. Thoughtful gifting.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/2348032179557?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20The%20Scents%20Plus%20Shop." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tooltip">Chat with us</span>
+  </a>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Product cards open WhatsApp with the product name pre-filled
+    const WA_NUMBER = '2348032179557';
+    const BASE_MESSAGE = 'Hello, I am interested in this fragrance. Please can I get more information?';
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        const nameEl = card.querySelector('.product-info h3');
+        const productName = nameEl ? nameEl.textContent.trim() : '';
+        const message = productName
+          ? 'Hello, I am interested in ' + productName + '. Please can I get more information?'
+          : BASE_MESSAGE;
+        const url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(message);
+        window.open(url, '_blank', 'noopener');
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const headerHeight = header.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
